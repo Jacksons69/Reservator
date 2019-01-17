@@ -38,14 +38,23 @@ const app = {
                 contentType: false,
 
                 success : response =>{
-                    $('#show-list').load('#show-list .table, #show-list #add-show', () => {
-                        app.listenAddShow();
-                        app.listenEditShow();
-                    });
-                    $('#new-show-form').find("input[type=text]").val('');
+                    console.log(response);
+                    
+
+                    if (response.message) {
+                        alert(response.message);
+
+                    } else {
+                         
+                        $('#show-list').load('#show-list .table, #show-list #add-show', () => {
+                            app.listenAddShow();
+                            app.listenEditShow();
+                        });
+                        $('#new-show-form').find("input[type=text]").val('');
+                    }
                 },
                 error: response => {
-                  alert(response+'Merci de réessayer');
+                  alert('Merci de réessayer');
                 }
             });
         })
@@ -69,7 +78,7 @@ const app = {
                     });
                 },
                 error: response => {
-                    alert(response+'Merci de réessayer');
+                    alert('Merci de réessayer');
                 }
             })
         })
@@ -108,7 +117,7 @@ const app = {
                     });
                 },
                 error: response => {
-                    alert(response+'Merci de réessayer');
+                    alert('Merci de réessayer');
                 }
             })
         })
@@ -147,10 +156,16 @@ const app = {
                 data: $('#form-new-booking').serialize() + "&id=" + app.modalId,
     
                 success : response =>{
-                    window.location.reload();
+                    const jsonResponse = JSON.parse(response);
+                    if (jsonResponse.message) {
+                        alert(jsonResponse.message);
+                    } else {
+                         window.location.reload();
+                    }
+            
                 },
                 error: response => {
-                    alert(response+'Merci de réessayer');
+                    alert('Merci de réessayer');
                 }
             })
         })
@@ -187,7 +202,7 @@ const app = {
                     jQuery('#booking-details').modal('show');
                 },
                 error: response => {
-                    alert(response+'Merci de réessayer');
+                    alert('Merci de réessayer');
                 }
             })
         })
@@ -207,7 +222,7 @@ const app = {
                     window.location.reload();
                 },
                 error: response => {
-                    alert(response+'Merci de réessayer');
+                    alert('Merci de réessayer');
                 }
             })
         })

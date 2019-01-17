@@ -9,6 +9,14 @@ class BookingController extends TwigLoader {
         $id = $_POST['id'];
         $places = $_POST['places'];
 
+        if (empty($name) || empty($id) || empty($places)) {
+
+            $datas = [
+                'message' => 'Merci de remplir tous les champs'
+            ];
+            echo json_encode($datas);
+            return false;
+        }
         $newBooking->setName($name);
         $newBooking->setPlaces($places);
         $newBooking->addBooking($id);

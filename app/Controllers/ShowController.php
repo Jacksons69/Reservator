@@ -9,6 +9,15 @@ class ShowController extends TwigLoader {
         $showName = $_POST['show-name'];
         $showDate = $_POST['show-date'];
 
+        if (empty($showName) || empty($showDate)) {
+
+            $datas = [
+                'message' => 'Merci d\'indiquer le nom et la date du spectacle'
+            ];
+            echo json_encode($datas);
+            return false;
+        }
+
         $formatedDate = str_replace('/', '-', $showDate);
   
         $newShow->setName($showName);
@@ -33,12 +42,18 @@ class ShowController extends TwigLoader {
             $showId = $_POST['edit-show-name-id'];
             $showName = $_POST['edit-show-name'];
             $editShow->setName($showName);
-        } 
-
-        if (!empty($_POST['edit-show-date'])) {
+       
+        } else if (!empty($_POST['edit-show-date'])) {
             $showId = $_POST['edit-show-date-id'];
             $showDate = str_replace('/', '-', $_POST['edit-show-date']);
             $editShow->setDate($showDate);
+       
+        } else {
+            $datas = [
+                'message' => 'Merci de choisir un champ à modifier'
+            ];
+            echo json_encode($datas);
+            return false;
         }
 
         $editShow->setId($showId);
