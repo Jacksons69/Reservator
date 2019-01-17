@@ -30,12 +30,14 @@
 ![JS](public/assets/gitimages/logojs.png?raw=true "JS")
 ![JQuery](public/assets/gitimages/logojquery.png?raw=true "JQuery")
 ![MySQL](public/assets/gitimages/logomysql.png?raw=true "MySQL")
+![Bootstrap](public/assets/gitimages/logobootstrap.png?raw=true "Bootstrap")
 ![Twig](public/assets/gitimages/twiglogo.png?raw=true "Twig")
 
 **Technologies used are :** 
 
 - HTML 5 (really ?!)
 - CSS 3
+- Bootstrap 
 - PHP 7 
 - MySQL
 - Javascript ES6
