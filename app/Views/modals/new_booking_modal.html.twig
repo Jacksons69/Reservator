@@ -1,0 +1,13 @@
+<div id="modal-new-booking" class="modal modal-new-booking">
+    <form class="form-group" id="form-new-booking" action="booking/add" method="post">
+        <input type="text" placeholder="Nom complet de la personne" class="form-control" name="booking">
+        <select id="people-number" class="form-control mt-3" name="places">
+            <option value="">Nb de places</option>
+            {% for i in 1..20 %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+    <a href="#" rel="modal:close">Fermer</a>
+</div>

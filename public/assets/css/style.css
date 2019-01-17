@@ -1,0 +1,203 @@
+body {
+    background-color: #F4F5F7;
+}
+
+
+/** SHOW LIST **/
+
+#show-list {
+    width: 60%;
+    margin: 3em auto;
+}
+
+#add-show, .valid-edit-show {
+    font-size: 1.5em;
+    color: #00AB00;
+    cursor: pointer;
+}
+
+.delete-show, .delete-booking {
+    color: #BB0000;
+    font-size: 1.2em;
+}
+
+.delete-show:hover, .delete-booking:hover {
+    color: #800000;
+    cursor: pointer;
+}
+
+.edit-show {
+    font-size: 1.2em;
+}
+
+.edit-show:hover {
+    cursor: pointer;
+    color: #71A0FF;
+}
+
+#add-show:hover, .add-booking:hover {
+    color: #004100;
+}
+
+.list-table thead {
+    background-color: #0063F1;
+    color: #fff;
+}
+
+#show-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-booking {
+    color: #00AB00;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.see-booking {
+    color: #0063F1;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.see-booking:hover {
+    color: #001C7A;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/** ADD SHOW FORM **/
+
+#new-show {
+    width: 30%;
+    margin: auto;
+}
+
+#new-show-form input {
+    margin: 1em 0;
+}
+
+#hide-show-form {
+    text-align: right;
+    float: right;
+}
+
+/** Datepicker new show form **/
+
+#ui-datepicker-div {
+    padding: 3em;
+}
+
+.ui-datepicker-header {
+    background-color: #0063F1;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.ui-datepicker-header a {
+    margin-left: 1em;
+}
+
+.ui-datepicker-title {
+    width: 100%;
+    text-align: center;
+}
+
+.ui-datepicker-calendar {
+    margin: auto;
+}
+
+.ui-datepicker-calendar th{
+    padding: 1.2em;
+}
+
+.ui-datepicker-calendar tbody tr {
+    text-align: center;
+}
+
+/** EDIT SHOW **/
+
+.edit-show-form {
+    width: 60%;
+    margin: 0;
+}
+
+.edit-show-form input {
+    padding: 0.2em;
+    margin: 0 0;
+}
+
+.edit-show-form-choices {
+    display: flex;
+    align-items: center;
+}
+
+.valid-edit-show {
+    font-size: 1.5em;
+    color: #00AB00;
+    cursor: pointer;
+    margin: 0.5em 0;
+}
+
+.btn-valid-edit {
+    background-color: #F4F5F7;
+}
+
+.cancel-edit-show {
+    font-size: 1.5em;
+    color: #D20000;
+    cursor: pointer;
+    margin-left: 0.5em;
+}
+
+
+/** NEW BOOKING **/ 
+
+#modal-new-booking {
+    width: 150em !important;
+}
+
+.modal a.close-modal {
+    right: 0em !important;
+    top: 0em !important;
+}
+
+#form-new-booking {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+#form-new-booking button {
+    margin: 1em 0;
+}
+
+
+/** BOOKING LIST **/
+
+.people-name {
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.people-name li {
+    width: 100%;
+}
+
+.delete-booking {
+    float: right;
+}

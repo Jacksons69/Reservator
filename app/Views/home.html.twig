@@ -1,0 +1,51 @@
+{% extends "index.html.twig" %}
+
+{% block content %}
+    <h1 class="text-center mt-3">Gestion des réservations</h1>
+
+    <div id="show-list">
+        <table class="table list-table">
+            <thead>
+            <tr>
+                <th>Actions</th>
+                <th scope="col">#</th>
+                <th scope="col">Nom du spectacle</th>
+                <th scope="col">Date de représentation</th>
+                <th scope="col">Nombre de réservations</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key, show in shows %}
+                <tr>
+                    <td id="show-actions">
+                        <i class="fas fa-trash delete-show" name={{ show.getId }}></i> 
+                        <i class="fas fa-edit edit-show" name={{ show.getId }}></i>
+                    </td>
+                    <td>{{ key + 1 }}</td>
+                    <td><span class="show-data-{{ show.getId }}">{{ show.getName }}</span>
+                        {% include 'forms/edit_showname_form.html.twig' %}
+                    </td>
+                    <td><span class="show-data-{{ show.getId }}">{{ show.getDate }}</span>
+                        {% include 'forms/edit_showdate_form.html.twig' %}
+                    </td>
+                    <td>{{ show.getPeople }}
+                        <a href="#modal-new-booking" rel="modal:open"><i class="fas fa-plus add-booking" name={{ show.getId }}></i></a>
+                        <i class="fas fa-eye see-booking" name={{ show.getId }}></i>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <i class="fas fa-plus" id="add-show"></i>
+    </div>
+
+    <div id ="new-show" class="hidden">
+        {% include 'forms/add_show_form.html.twig' %}
+    </div>
+
+
+    {% include 'modals/new_booking_modal.html.twig' %}
+    {% include 'modals/booking_details_modal.html.twig' %}
+
+{% endblock %}
+

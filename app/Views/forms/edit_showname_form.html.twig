@@ -1,0 +1,8 @@
+<form class="edit-show-form edit-show-form-{{ show.getId }} hidden form-group" method="post" action="edit/show">
+    <input type="text" value="{{ show.getName }}" class="form-control" name="edit-show-name">
+    <input type="hidden" value="{{ show.getId }}" name="edit-show-name-id">
+    <div class="edit-show-form-choices">
+        <button type="submit" class="btn btn-valid-edit"><i class="fas fa-check-circle valid-edit-show valid-edit-show-{{ show.getId }}" name="{{ show.getId }}"></i></button>
+        <i class="fas fa-times-circle cancel-edit-show" name="{{ show.getId }}"></i>
+    </div>
+</form>

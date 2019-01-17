@@ -1,0 +1,8 @@
+<form class="edit-show-form edit-show-form-{{ show.getId }} form-group hidden" method="post" action="edit/show">
+    <input class="datepicker form-control" type="text" value="{{ show.getDate }}" name="edit-show-date">
+    <input type="hidden" value="{{ show.getId }}" name="edit-show-date-id">
+    <div class="edit-show-form-choices">
+        <button type="submit" class="btn btn-valid-edit"><i class="fas fa-check-circle valid-edit-show valid-edit-show-{{ show.Id }}" name="{{ show.getId }}"></i></button>
+        <i class="fas fa-times-circle cancel-edit-show" name="{{ show.getId }}"></i>
+    </div>
+</form>
