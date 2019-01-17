@@ -1,10 +1,11 @@
 # Reservator - Gestion de réservations pour un petit théâtre
-## Sommaire
-1. Presentation
-2. Technologies used
+## Summary
+- [Presentation](#presentation)
+- [Technologies used](#technologies-used)
+
 ## Presentation
 
-**This project was created by my initiative to help a loved one. The functionalities are simple and effective:**
+**This project was created by my initiative to help a loved one. It was made for free and for fun. The functionalities are simple and effective:**
 - Ability to add, edit or delete an upcoming show
 - Possibility to add the name of a person for a booking to a given show, as well as the number of places (if booking for several)
 - Possibility to see all the people who have reserved for a show and to delete these reservations.
